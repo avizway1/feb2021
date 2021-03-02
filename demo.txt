@@ -1,0 +1,334 @@
+D: 17/02/2021
+
+Cloud Computing : AWS, Azure, GCP, Alibaba, Oracle cloud, Rackspace, virtustream, fujitsu... 
+
+COmputing Resources : Server, Storage, network, application, services, database... 
+
+Virtualisation : Same hardware can be shared with multiple customers. 
+	--> Bare Metal Hypervisor (hardware + small s/w + OPerating system)
+	--> Host Based Hypervisor ( Hardware + OS(win 10) + application (Vmware / virtualbox) + Operating system)
+
+--> Shared Tenancy : Underlying hardware shares with multiple customers. 
+--> Dedicated tenancy : Dedicatedly delivers hardware with only one customer. 
+
+ec2 : Servers in AWS
+
+
+___________________________________________________________________________
+
+Q: Do we need any prog experience to learn aws..??
+Ans : Not required..!! A Novoice / Fresher also can learn.
+
+Q: Do we need to learn Linux.?
+Ans : yes, Basic linux required.. Teach.. Free Course: Linux, Git, Jenkins
+
+Q: Am in support job (System admin / System Engineers / DBA / Network admin / storage admin / Security), WIll this suites me..?
+Ans : It will take your career to next stage.
+Ans : AWS Engineer / SysOps administrator / DB engineer / AWS network engineer / Solutions architect / cloud engineer.
+
+Q: Am an existing developer (.net / java / python / node.js / go / ruby / typescript), how this course help me.!!
+Ans : AWS Developer..  CDK (Cloud Development kit).. 
+
+Q : What certifications we can achive with this course.?
+Ans : Cloud Practitioner, AWS Solutions architect-Associate, SysOps Administrator, AWS Developer.
+500-600 Questions i will share.
+
+Q: Do we have any projects/realtime.?
+Ans : Course 95% hands-On.. Yes.. Multiple realtime scenarios..
+
+SMS : Migration Service : local to AWS : 
+DMS : Database Migration : 
+Hybdrid environment : local + aws : 
+
+Q : How many yrs of exp we can add with this course.?
+Ans : 3.5 to 4 yrs exp to your profice (If complete all the tasks)
+
+Q: Session is recorded.. 12 Months.. 
+
+
+_______________________________________________________________________________________
+
+D: 18/02/2019
+
+Public Cloud : Open for everyone.. AWS, Azure, GCP.. Maintenance : Service Provider.. 
+
+Private Cloud : Designed to deliver the service for One Organisation.. 
+		Main: Org may maintains a dedicated team / 3rd part org
+
+Hybdrid Cloud : Combination of one or more cloud platforms : Main : 
+
+	On-Premise (private) + AWS (public) = HC = AWS Direct Connect, AWS Outpost, VPN
+	Azure/GCP (public) + AWS (Public) = HC = VPN
+
+Community Cloud : Group of organisations, they build infra.. they only use infra.. 
+	Main: one of the org from community / 3rd part org
+
+
+CAPEX : Capital Expendature : You need to invest to build the infra..!! No CAPEX
+OPEX : Operational Expendature : Less OPEX in CLoud..!!
+
+
+Service Models of the Cloud Computing : 
+--> SaaS
+--> PaaS
+--> IaaS
+
+application		--> CUstomer
+data			--> SA
+runtime			--> Application admin
+middleware
+operating system	--> System admins
+Virtulisation		--> Vmware/ hyper-v
+servers			--> System engineers
+database		--> DBA
+storage			--> Storage admins
+network			--> Network Admin
+
+_______________________________________________________________________________________
+D: 19/02/2021
+
+Requirement : Needs a Website.!!
+
+SaaS : Lightsail : 
+PaaS : ElasticBeanstalk : 
+IaaS : ec2 : 
+
+Security : shared security responsibility model
+
+Security OF the Cloud : Service provider responsibility.
+Security IN the cloud : Customer Responsibility.
+
+
+Pay-as-you-go : Pay for the resources you actually used.. 
+
+CAPEX : No capital expendature required in AWS : 
+
+
+____________
+
+https://www.udemy.com/course/jenkinswithavinash/?couponCode=FEB222
+
+https://www.udemy.com/course/linuxwithavinash/?couponCode=FEB222
+
+https://www.udemy.com/course/gitbyavinash/?referralCode=F7D62CDB4D61EADE1CC7
+
+
+_______________________________
+
+AWS : Cloud service provider : 
+--> Pay-as-you-go : Pay for the resources you actually use.
+
+Why only AWS..??
+
+2003 : Designed documentation  
+2004 : SQS : Simple QUeue service..?? 
+2006 : AWS Officially launched
+2012 : Re:Invent Annaual conference (Nov last week /Dec 1st week).. Most of the new services they intro..
+
+Andy Jessy : CEO of AWS.. CEO of Amazon also..
+
+___________________________________
+
+AWS Global Infrastructure : 
+
+Region : geolocation / physical where AWS segrigated.. : 24 Regions.. 
+--> Every Region contains Min of 2 AZs.. 
+
+--> mumbai : ap-south-1   (Hyd: ap-south-2)
+--> NVirginia : us-east-1
+
+Hyderabad region coming soon : 
+
+Availability Zones : AZs : Data Center / combination of Multiple DCs.. : 77 AZs.. 
+--> Every AZ is isolated/independent to another Az failure.
+--> Every AZ have multiple network connectivity with another AZs. 
+
+Mumbai : 3 AZs : ap-south-1a, ap-south-1b & ap-south-1c
+
+PoP Location : Point of Presence : CDN (Content Delivery Network) : CloudFront : 
+220+ Edge locations across the globe..
+
+_______________________________________________________________________________________
+
+D: 23/02/2021
+
+root user : Highest permissions/priority on our AWS account. If we are login to aws with EMAIL..!!
+IAM User (Identity and Access management) : 
+
+
+https://aws.amazon.com/free
+
+ec2 : elastic compute cloud : Run Servers : 
+--> 750 Hr/Month.. t2.micro.. windows server.. 1 x Server = 31 days.. 
+--> 750 Hr/Month.. t2.micro.. Linux server..
+
+s3 : simple storage service : store our data : 5 gb/Month standard storage : 
+
+rds : realtional database service : launch database : db.t2.micro.. 750 Hrs/Month..
+https://www.youtube.com/watch?v=0ULZ7SI_alA
+
+Step 1 : Email, Password, Confirm password and Account Name 	
+
+Step 2 : COntact information
+	Full Name, Address, COntact information.. 		
+
+Step 3 : Provide payment information
+	--> CC/DC : Visa / Master Card / AMEX..   		
+	--> AWS Deducts 2 INR from account.. Refund back.. 
+
+Step 4 : Verify our Identity
+	--> Phone verification / email verification
+	--> Enter ph num .. CALL ME NOW.. 0000.. Answer the call and eneter 4 digit pin
+
+Step 5 : choose a Support plan 
+ 
+1) Account and Billing related query : 24x7 support, with all SP
+2) Service Limit Increase : 24x7 support, with all SP
+3) Technical support : based on support plan
+
+Basic SP : 1 & 2 Free.. No Technical support.. PRICE: FREE
+--> 7 Core area checks with Trusted advisor
+--> Technical Support : AWS Documentation, AWS Support Forums / Developer Forums, Knowledgebase articles.
+
+Developer SP : 1 & 2 Free..  3 --> 12-24 local business hours Email suppport from Cloud Support Associate..  PRICE : 29$/MONTH..
+--> 7 Core area checks with Trusted advisor
+--> 1 Primary contact can raise ticket and We can raise Unlimited tickets.
+General guidelines : < 24 hrs
+System impaired : < 12 Hrs
+
+Business SP : 1 & 2 Free..  3 --> 24x7 Phone, email and chat support with Cloud support engineer..  PRICE : 100$/MONTH..
+--> Full Trsuted advisor checks
+--> Any user can raise ticket / unlimited tickets..
+
+General guidelines : < 24 hrs
+System impaired : < 12 Hrs
+Production system impaired : < 4 Hrs
+Production system down : < 1 Hr
+
+Enterprise SP : 1 & 2 Free..  3 --> 24x7 Phone, email and chat support with Cloud support engineer..  PRICE : 15,000 $/MONTH..
+--> Full Trsuted advisor checks
+--> TAM (Technical Account Manager)
+--> Anual Operation reviews and Architectural reviews
+--> Any user can raise ticket / unlimited tickets..
+--> Account assistance : Concierge support team
+--> AWS dedicated training
+
+General guidelines : < 24 hrs
+System impaired : < 12 Hrs
+Production system impaired : < 4 Hrs
+Production system down : < 1 Hr
+Business critical system down : < 15 min
+
+
+Trusted advisor : AWS gives advises to save cost, improve secuity, improve FT and HA.. 
+
+you choose Only BASIC SUPPORT PLAN.
+
+--> Review and Create AWS account.
+
+login : https://aws.amazon.com/console  / aws.com
+
+____________________________________________________________________________________
+
+D:24/02/2021
+
+Enable MFA on our Root Account.!!
+--> Additional layer of security for our root account..!! Root account always have unrestricted access on our AWS env..!!!
+
+virtual/Software MFA : smartphones : Google Authenticator, Microsoft authenticator
+Hardware MFA : Physical device : 
+yuby2key : usb type of device.. When we connect this to lap/desktop, then only it allows to connect.. 
+
+
+Root User : 
+	--> Changing the support plan.
+	--> Defaultly, only root user change manage the billing access. 
+	--> unrestricted access
+
+IAM User : 
+
+S3user : Simple Storage Service : S3FUllAccess Policy : un, pwd & Sign-in
+ec2user : Elastic Compute Cloud : ec2fullaccess : un, pwd & sign-in
+TL : full Access on all the services : administratoraccess : un, pwd & sign-in
+
+
+Policy : Document that contains set of permissions on our AWS env..!! Writtens in JSON format. We have policy genrator to generate our own policies.
+--> S3readonlyaccess, s3 fullaccess
+--> ec2readonly, ec2full
+--> administrator policy, poweruser policy
+
+
+Username : s3user
+AccessType :
+	--> AWS Management console : GUI : username, pwd : Browser
+	--> ProgramaticAccess : CLI : AccessKeyID and SecretAccessKey : cli, api, cdk, 							3rd party application
+Permissions : 
+	--> Create a Group, add permissions at group level and add this user to group
+	--> Copy settings from another IAM user
+	--> Attach policy directly to the user
+
+Add tags
+
+Review and Create.
+
+
+Username : s3user
+Accesstype : Management console,  Autogenerated password, Required pws reset
+Policy : S3FullAccess Policy
+
+s3user : attached S3Fullaccess directly --> s3 access only
+ec2user : Member of a group : group contains EC2FullAccess --> Ec2 access only
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+S3 : Simple Storage Service : 
+
+--> Object based Storage : We can store only flat files.
+--> Block based storage : EBS / Instance Store : Designed run OS / Application / cluster.
+--> Storage over the Network : NAS/SAN : EFS / FSx : Storage avaiblae over the network..
+
+
+--> S3 is global resource (like IAM). Doesn't required any region selection.
+--> WHile creating bucket, we need to choose the region. Data physically stores in that region.
+--> Bucket : FOlder/Directory with unique namespace.
+--> Bucket name should be unique across the globe. 
+--> Bucket naming standards:
+	--> Min char : 3 , Max char: 63 char
+	--> No capital letters
+	--> Should not start with special char
+	--> SHould not start with . , should end with the . , No adjesent ..
+	--> Should not resemble IP address format.
+--> We have unlimited storage in s3 platform.
+--> No Pre-Provisioning required. 
+--> Max Object Size is 5 terabytes (TB) , Min Size 0 bytes.
+
+Public Access Settings :
+--> To make any object public, We need to "Turn Off" "Block Public ACcess" at bucket level.
+--> Choose the object you want to make public, Then "Make Public".
+
+URL Systax :  	https://avinash9.s3.ap-south-1.amazonaws.com/cc.jpeg  & 
+		https://s3.ap-south-1.amazonaws.com/avinash.tk/index.html	
+
+Standard URL : https://s3.regioncode.amazonaws.com/bucketname/objectname
+Virtual Path : https://bucketname.s3.regioncode.amazonaws.com/objectName
+(Virtual Path works when we don't have . in the bucket name)
+
+
+S3 Storage classes : 
+
+
+gdrive		
+
+100 gb						No-Pro	
+
+20 gb Freq					S3 Standard
+20 gb infreq					Stanrdard-IA / OneZone-IA
+10 gb not imp data				RRS (Redused Redundancy storage)
+10 gb archive					Glacier / Glacier Deep Archieve
+10 gb don't know the access pattern		Intelligent tier
+
+
+S3 Standard : Designed to store Frequently accessed data.. Data will be available immediately..!!! This is the default storage class when we upload any data to s3 platform.
+Availability : 99.99 %
+Durability : 99.999999999 % (11 9's)
+Data Spread Across : >= 3 AZs
+
+S3 Standard - IA (Infreq accessed) : Designed to Infreq accessed data.. Data will be available immediately..!!!
+Availability : 99.9 %
+Durability : 99.999999999 % (11 9's)
+Data Spread Across : >= 3 AZs
+
+S3 OneZone - IA (Infreq Acc) : Designed to Infreq accessed data.. Data will be available immediately..!!! Less Imp Data..
+Availability : 99.5 %
+Durability : 99.999999999 % (11 9's)
+Data Spread Across : 1 AZs
+
+S3 Glacier : Designed to Archive the data for longer durations.. Data will not be available immediately..!!!
+Availability : 99.99 %
+Durability : 99.999999999 % (11 9's)
+Data Spread Across : >=3 AZs
+Duration to Restore the Data : Minutes to Hours..!!
+
+S3 Glacier Deep Archive: Designed to Archive the data for longer durations.. Data will not be available immediately..!!!
+Availability : 99.99 %
+Durability : 99.999999999 % (11 9's)
+Data Spread Across : >=3 AZs
+Duration to Restore the Data : Hours..!!
+
+S3 Intelligent Tier : If we have unknown access patterns.. Data will be available immediately..!!!
+Availability : 99.9 %
+Durability : 99.999999999 % (11 9's)
+Data Spread Across : >=3 AZs
+
+RRS (Redused Redandancy Storage) : Not recommanded..!!!  Easily reprodusable data, Non Mission critical data..!!
+Availability : 99.9 %
+Durability : 99.99 % (Less Durability compare to all remaianing storage classes)
+Data Spread Across : >=3 AZs
+
+
+Task 1 : Create an IAM user, associate "AdministratorAccess", Login and try to access billing information..!!! It will deny... Enable Billing access to IAM users..!!
+
+Free Tier : 5 Gb S3 - Standard Storage..!!
+--> 2000 PUT Object operations
+--> 20,000 GET object operations
+
+_______________________________________________________________________________________
+
+D: 02/03/2021
+
+Enable free tier limitation alerts.!!!
+
+If data is in glacier, we need to initiate restoration.
+expedated : 1-5 Min
+Standard  : 3-5 Hours
+Bulk restore : >12 Hours
+
+___
+
+Versioning : 
+--> When versioning is enabled, if we delete an object (Versioning: hide) We will get a delete marker.
+--> Delete the DeleteMarket to get the object back to s3.
+--> When versining set to "SHOW", if you delete any object it won't create any delete marker.
+
+delete : Create a Delete marker.
+permanently delete : It Delete permanently.
+
+
+common tags for AWS environment..!!
+Project : Project X
+Application : APP X
+Cost center : AAZAA
+POC (Point if Contact) : Avinash 
+platform : Linux / WIndows (ec2 instances)
+
+
+
+
+
+
+
+
+
+
