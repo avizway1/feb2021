@@ -118,6 +118,34 @@ Cost center : AAZAA
 POC (Point if Contact) : Avinash 
 platform : Linux / WIndows (ec2 instances)
 
+______________________________________________________________________________________
+
+D: 03/03/2021
+
+Life Cycle Management RUle : To trasit data from One storage class to another storage class. TO delete data automatically. 
+
+
+Same Region Replication / Cross Region Replication (SRR/CRR): 
+--> Existing data will not replicate. ALl the future/subsequent uploads will replicate to destination bucket.
+
+RTC : When we enable this feature all the object will replicate with in 15 minutes.
+
+
+Task : What is Replication Priority..? What does 0, 1 ..?
+
+Task 2 : Configure Lifecycle management rule to trasit data from S3Standard to Delete after 2 days for Current version also for previous version of the object.
+
+Same region repliucation won't cost. 
+CRR will cost us : Data transfer..!!
+
+aws s3 sync sourcebucket destination
+
+
+
+
+
+
+
 
 
 
