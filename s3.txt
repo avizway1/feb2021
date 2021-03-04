@@ -140,6 +140,59 @@ CRR will cost us : Data transfer..!!
 
 aws s3 sync sourcebucket destination
 
+_____________________________________________________________________________________
+
+D: 04/03/2021
+
+Encryption on AWS : 
+KMS Key Management Service.
+
+
+In-Transit Encryption : 
+--> SSL / TLS 
+
+At-Rest Encryption / Server Side Encryption (SSE):
+--> SSE - S3  : Encryption material will be generated and managed by S3 platform. Whoever have valid permissions on S3 platform they can decrypt the data.
+
+--> SSE - KMS : 
+	--> aws/s3 : DMK (Default Master key) (AWS managed keys) Encryption material will be generated and managed by KMS. Whoever have valid permissions on S3 platform they can decrypt the data.
+	--> KMS/customname : CMK (Customer Managed Key) Encryption material will be generated and managed by KMS. Whoever have valid permissions on KMS KEY they can decrypt the data.  "NO FREE TIER ELIGIBILITY"
+
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operation.
+
+--> Creating a KMS Key :
+	--> Choose Symmetric / Asymetric
+	--> Give an Alias
+	--> Allocate KEY ADMINISTRATORS
+	--> Allocate KEY USERS
+
+--> SSE - C  : Customer Provided Key material :  Encryption material shoild be generated and uploaded to KMS, and KMS manages the Key usage with our own logic. Whoever have valid permissions on KMS KEY they can decrypt the data.  "NO FREE TIER ELIGIBILITY"
+
+
+
+Client Side Encryption (CSE) : AWS won't take any responsibility. We are uploading encrypted data to aws s3 platform. Use your own infra application to encrypt the data then upload the data to s3.
+
+___________
+
+Server access logging : We can logging on an individual bucket with this feature.
+
+Transfer acceleration : We can upload/download data via Edge location to s3 bucket. We can run speed compariosn tool before enabling this feature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
