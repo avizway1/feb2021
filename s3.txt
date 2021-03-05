@@ -179,6 +179,42 @@ Server access logging : We can logging on an individual bucket with this feature
 
 Transfer acceleration : We can upload/download data via Edge location to s3 bucket. We can run speed compariosn tool before enabling this feature.
 
+_______________________________________________________________________________________
+
+D: 05/03/2021
+
+Bucket Policy : 
+
+User 1 : full access to s3 platform.. 1 bucket read and write
+User 2 : full access to s3 platform.. 1 bucket read..!!!
+
+put : upload
+
+effect : ALLOW / DENY  : Deny
+pricipal : arn:aws:iam::518084852393:user/s3fulluser
+Actions : putobject
+on what resource : S3 ARN : arn:aws:s3:::avinash9/*
+
+
+Event Notifications : 
+--> SNS Simple Notification Service : Example
+--> SQS Simple Queue Service
+--> Lambda
+
+
+Object Lock : 
+--> Versioning must be enabled.
+
+Governance : Users with specific IAM permissions can overwrite or delete protected object versions during the retention period.
+
+Compliance : No users can overwrite or delete protected object versions during the retention period.
+
+
+Task : Bucket1 , IAm User IAMUser1...    For this IAM User, provide only one bucket access. 
+
+
+
+
 
 
 
