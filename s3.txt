@@ -212,8 +212,9 @@ Compliance : No users can overwrite or delete protected object versions during t
 
 Task : Bucket1 , IAm User IAMUser1...    For this IAM User, provide only one bucket access. 
 
+___________________________________________________________________________________
 
-
+D: 06/03/2021
 
 
 
