@@ -216,6 +216,47 @@ ________________________________________________________________________________
 
 D: 06/03/2021
 
+Static website hosting : 
+--> Your bucket name should be same as your domain name (if you want to map domain in future).
+--> You should make data publicly accessable.
+--> Default object : index.html.. Error obj: error.html
+--> We can configure doamin redirection.
+
+https://bucketbname.s3-website.regioncode.amazonaws.com
+
+https status codes : 
+--> 2XX : OK/Success
+--> 3XX : Redirection error
+--> 4XX : Client side error
+--> 5XX : Server side error
+
+Access control list (ACL) : 
+
+To share a bucket with another AWS account users, We use cananical id. 
+
+Aws cli / 3rd party applications.
+
+Requester pays : Whoever is requesting the data from this s3 bucket, they'll get charged for the Requests.
+
+Cross-origin resource sharing (CORS) : 
+
+Storage Class Analysis : Report on How we are accessing the data, best storage class for the data.
+
+Storage classes
+
+Encryption
+Bucket policy
+
+Versioning
+LCR
+CRR/SRR
+
+
+
+
+
+
+
 
 
 
