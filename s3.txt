@@ -242,14 +242,49 @@ Cross-origin resource sharing (CORS) :
 
 Storage Class Analysis : Report on How we are accessing the data, best storage class for the data.
 
-Storage classes
-
+"Storage classes
 Encryption
 Bucket policy
-
 Versioning
 LCR
-CRR/SRR
+CRR/SRR"
+
+______________________________________________________________________________________
+
+D: 08/03/2021
+
+Snow Family:
+
+SnowCorn : 8 TB  : $60 (5 Days Free, Per day 6$)
+SnowBall Edge : 40TB - 100 TB (300$/Job, 10 Days Free.. Per day 30$)
+Snow Mobile : PB Scale Container : 3 months  (1gbps internet line.. 1 Pb data over internet = 20-25 Yrs to upload data)
+
+
+AWS Direct Connect : Dedicated connectivity between AWS environment and our local on-premise environment. Fiber connectivity.
+
+
+How to access s3 with 3rd Party applications.
+--> Cloudberry explorer, winscp, s3 browser, cyberduck
+
+_________________________
+
+S3 platform 
+
+3500 Put/Prefix/Sec
+5500 GET/Prefix/Sec
+
+folder1/3500 put & 5500 get
+folder2/3500 put & 5500 get
+
+--> Try to add/increase randomness to object names.
+--> Try to use Prefixes..!!
+
+
+
+
+
+
+
 
 
 

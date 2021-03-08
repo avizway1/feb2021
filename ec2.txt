@@ -1,0 +1,18 @@
+EC2 : Elastic Compute Cloud : 
+
+Instance = Server = Box = Azure VM = GCP Engine
+
+
+Pay-as-you-go machanism..!! 
+
+
+
+--> On-Demand ec2 instances :
+--> Reserved ec2 instances :
+--> Spot ec2 Instances : 
+
+
+
+
+
+
