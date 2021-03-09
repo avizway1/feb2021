@@ -5,11 +5,58 @@ Instance = Server = Box = Azure VM = GCP Engine
 
 Pay-as-you-go machanism..!! 
 
+____________________________________________________________________________________
+D: 09/03/2021
+
+ec2 : Elastic compute cloud :
+
+On-Demand ec2 instances : Unpredictable workload.. Testing our application.. No stable workloads..
+Price : /Sec (with Min of 60 Sec)
+
+Reserved Instances / RI : Predictable workloads.. Stable workloads.. FOr long terms with AWS.. Duration: 1 Yr / 3 yr
+
+	Standard RI : We cannot change the configuration.
+	Convertable RI : We can upgrade the configuration.
+	Scheduled RI : Persisant req during the purchased duration (ex: MON-FRI, weekly 	40 hrs)
+
+Price : FullUpfront : Pay 100% now, get your instance.
+	Partial Upfront : Pay 30-50% now, AWS will reduse the hourly price, Within month 	how many hours you are using, pay for that only.
+	No Upfront : Need to hourly basis.
+
+Spot Instances : We can bid against the aws pricing, IF your quoted price is equal or more than aws price, We will get the instance.
+--> If Price increased by AWS, Our instances terminates. We no need to pay for Partial Hour.   1 hr 45 min : 1 hr cost
+--> If price not increase by AWS, you terminated your instance, we need to pay full hour cost.   1 hr 45 min :  1 hr 45 min Cost
 
 
---> On-Demand ec2 instances :
---> Reserved ec2 instances :
---> Spot ec2 Instances : 
+ec2 instance isolation diagram : 
+
+Tenancy : 
+Shared Tenancy : underlying hardware shared with multiple customers.
+Dedicated Tenancy : Underlying hardware will not share with any other customers.
+	--> Dedicated Instane : We wil get dedicated instance.
+	--> Dedicated Host : We can launch multiple instances. If you want to bind any 		licenses to cpu/memory reosurces, we need to choose this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
