@@ -37,6 +37,83 @@ Dedicated Tenancy : Underlying hardware will not share with any other customers.
 	--> Dedicated Host : We can launch multiple instances. If you want to bind any 		licenses to cpu/memory reosurces, we need to choose this.
 
 
+______________________________________________________________________________________
+
+D: 10/03/2021
+
+Ec2 is a region specific service.
+
+Mumbai : Very near to me..!! 
+NVirginia : 
+
+
+Step 1 : Choose an AMI (Amazon Machine Image)		: CHoose the OS
+
+Step 2 : CHoose the Instance type			: Choose t2.micro (FREE TIER)
+
+General Purpose : gives balance performance of compute, memory and networking resources. We use this for wide usecases. 
+--> t2, t3, t3a, m4, m5, m5a, m6g, a1
+
+COmpute Otimized : optimised for compute bound applications that requires hight perf processors. More CPU utilized resources.
+--> c4, c5, c5n, c6g
+
+Memory Optimized : TO process large data set via memory.  More Memory consumed application required this type of instances.
+--> r4, r5, r5n, r6g, x1, x1e, z1
+
+Accelerated Computing : More Grahic processing, if application required hardware acceleration..!! GPU instances.
+--> p4, p3, p2, g3, g4, f1
+
+Storage optimized : High perf from the storage (hard disk).  It gives more I/O per
+(IOPS) from storage.
+--> h1, d2, d3, d3en, i3
+
+
+t3.xlarge, 4 vCPU, 16 RAM
+c5.xlarge, 4 vCPU, 8 RAM
+m4.large, 2 vCPU, 8 RAM
+
+Step 3 : Choose additional options.
+
+Shutdown behavior : Stop  (What should happen to your ec2 instance if you initiate shutdown from OS level)
+Enable termination protection : Enable
+
+Step 4: Add Storage				: windows 30 Gb
+
+Step 5 : Add tags
+	Name : 
+	Application : App X
+	COst center : AZZAA
+	Platform    : Windows / Linux
+
+Step 6 : COnfigure the Security groups (0-65535 protocols/port)
+
+Windows : RDP : 3389 : 0.0.0.0/0
+Linux : SSH : 22
+webserver : http : 80
+Secure webserver : https : 443
+ms sql : 1433
+mysql : 3306
+DNS : 53
+
+Step 7 : Review and Launch instance with a Keypair.
+
+AWS Holds the public, aws copies that public key to the ec2 instance.
+We will get the private key (.pem), If we want to connect to the instance, we need to browse the private key against the public key.. Then we will get the password. 
+
+
+TO connect to windows instance:
+--> run --> mstsc --> enter --> remote desktop connection windows
+--> go to start and search for "remote desktop"
+--> Select instance--> click on "connect" --> RDP Client --> "Download remote desktop file" --> open it.
+
+
+Task : Launch an ec2 instance, connect to instance with the keypair given password.. and change the password.. Signout then try to login with keypair given password and custom password..!!!!
+
+Task 2 : WIndows instances supports 2 terminal connections.. 
+--> Create another user at OS level.. Provide Local Admin rights to this user.. Provide "Remote desktop permissions".. 
+--> keep Administrator session active... and try to take session as newly created OS user.
+
+
 
 
 
