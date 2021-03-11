@@ -113,6 +113,82 @@ Task 2 : WIndows instances supports 2 terminal connections..
 --> Create another user at OS level.. Provide Local Admin rights to this user.. Provide "Remote desktop permissions".. 
 --> keep Administrator session active... and try to take session as newly created OS user.
 
+_________________________________________________________________________________________
+
+D: 11/03/2021
+
+Step 1 : CHoose an AMI 		: Amazon Linux 2
+
+Step 2 : Choose an Instance	: t2.micro
+
+Step 3 : Additional configurations : 
+	--> Shutdown behaviour : STOP
+	--> Termination protection : Enable
+
+Step 4 : Choose the storage	: windows Min 30 gb, Linux min 8 gb
+
+Step 5 : Add tags
+
+Step 6 : Configure the Securoty Groups
+
+Linux : port 22 : SSH : 0.0.0.0/0
+
+Step 7 : Review and Create a Keypair and launch instance.  (.pem file)
+
+How to connect to Linux Instance.!!
+--> Putty (puppt won't support .pem file.. We need to use .ppk file)
+	--> Before launching an ec2 instance, create .ppk file and use it.
+	--> Using "PuttyGen", convert the .pem to .ppk
+	--> https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+	--> COnnections --> Expand SSH --> Select AUTH and browse the valid .ppk file
+
+--> GIT bash terminal  (.pem)	: https://git-scm.com/download/win
+--> Windows command prompt (.pem) : Enable openssh in windows 10. (settings --> Apps --> optional features --> openssh client)
+
+--> MAC OS / Linux : Open terminal
+
+ssh -i keypairname.pem username@publicip
+
+Common issue : Permissions are too open/everyone.
+chmod 400 keypair.pem
+_______
+Whenever we are launching an ec2 instance AWS verify the health status of the ec2 instance and underlying hardware. (2/2)
+
+System status checks : Hardware level issues : STOP and START the instance.
+Instance status checks : OS level issues : reboot.. Verify system logs..
+_____
+
+http://35.154.145.145/
+
+13.126.24.226
+
+Elastic IP Address : EIP : 
+Whenever we stop/start ec2 instance, we will get a new public ip address. Get have a fixed ip address, we can use EIP.
+
+
+Free Tier : 750 Hrs/Month, t2.micro Windows Instance.. 
+750 Hrs/Month, t2.micro Linux Instance..
+
+1 instance = 31 x 24 hrs = 744 Hrs
+2 instance = 16 x 24 hrs = 750+ hrs
+
+We can have 20 running instances at a time. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
