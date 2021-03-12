@@ -175,22 +175,83 @@ Free Tier : 750 Hrs/Month, t2.micro Windows Instance..
 We can have 20 running instances at a time. 
 
 
+_____________________________________________________________________________________
+
+D: 12/03/2021 
+
+
+EBS : Elastic Block Storage 
+
+root volume : Contains Operating system.
+
+Delete on Termination : If we terminate our ec2 instance, what should happen to our ebs volume.
+
+Boot Volumes (to run root volumes) : gp2, gp3, io1, io2, magnetic 
+
+Free Tier : 30 gb / Month
+
+General Purpose SSD : gp2 / gp3 : For most of the common worklods we use this. Development and test environments.. Low-latency interactive applications.. 
+Size : Min 1 Gb, Max : 16 TB
+Max IOPS : 16,000
+
+gp2 : we will get iops based on 1:3 ratio (1 gb = 3 iops) with min of 100 iops. We cannot specify required iops count.
+gp3 : We have a flexibility to choose the required IOPS count.
+
+___
+
+Provisioned IOPS : io1 / io2 : If we required highest performance from volumes. If we need more than 16k IOPS. Production environemnt, IO Intensive applications.. Production databases..
+Size : Min 4 Gb, Max : 16 TB
+Max IOPS : 64,000
+
+Default iops ratio is 1 : 50, but We have a flexibility to choose the required IOPS count.
+
+____
+
+Throughout optimized hdd : st1 : sequential frequently data processing worklods we use this. --> bigdata, Log processings, Data warehousing solutions...  (EMR)
+Size : Min 125 Gb, Max : 16 TB
+Max IOPS : 500
+
+Cold hdd : sc1 : sequential lessfrequently data processing worklods we use this. Lowest cose than st1.. 
+Size : Min 125 Gb, Max : 16 TB
+Max IOPS : 250
+
+___
+
+Previous generation : Standard / Magnetic
+--> Lowest cost strage for infrequrntly accessed worklods we choose Magnetic.
+Size : 1 gb, Max : 1 tb
+Iops : 40-200 iops
+
+
+--> run --> diskmgmt.msc --> enter
+-> start --> Server Manager --> tools --> Computer management --> 
+
+choose the volume, make it online, Initilise with MBR, Create a new volume with file system.
+
+windows : fat16, fat 32, ntfs, ReFS
+Linux : ext3, ext4, xfs
+
+Task : Increase the size of an existing volume.
+--> Increase the voluem size at console level first.  then OS level.
+
+--> We cannot decrease the EBS volume. Only increase is possible.
+
+
+Instance 1 			Instance 2
+
+in what AZ..? ap-south-1a	Same AZ..? ap-south-1a	--> Detach and attach.
+
+ap-south-1a			ap-south-1b		--> Create a SS and From snapshot create a volume in required AZ, then we can associate.
+
+
+Snapshot : Snapshot is a backup copy of our ebs volume. 
 
 
 
+Task : Launch an ec2 instance in ap-south-1a with 30 gb root volume.. Create 1 gb volume, associate with instance and make it available.
+--> Increase the 1gb volume size to 2 gb.. and make it aval at os level and add some data.. 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Task 2 :  Launch another ec2 instance in ap-south-1b.. get the 2gb additional volume from ap-south-1a instance and make it avail here. verify all data existed or not..!!!
 
 
 
