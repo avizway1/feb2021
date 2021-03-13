@@ -253,11 +253,41 @@ Task : Launch an ec2 instance in ap-south-1a with 30 gb root volume.. Create 1 g
 
 Task 2 :  Launch another ec2 instance in ap-south-1b.. get the 2gb additional volume from ap-south-1a instance and make it avail here. verify all data existed or not..!!!
 
+_______________________________________________________________________________________
+
+D: 13/03/2021
+
+Snapshots : 
+--> Snapshots stores in s3 platform in backend.
+--> Snapshot works as Point-in-time-recovery copy. 
+--> We can create a snapshot
+	--> We can create a volume in same region but another AZ.
+	--> We can copy snapshot to another region, there we can create volume.
+	--> We can share snapshot with another AWS account.
+	--> We can make snapshot public also.
+--> We cannot share a snapshot that is encrypted with Default encryption key. 
+
+--> If we want to enable encyrption for an existing volume, not possible.  We can create snapshot of the existing volume, restore, we can enable "encryption". 
+
+--> Fast snapshot restore : boost the snapshot restoration process. COst heavily.
+
+__
+
+DLM : Data Lifecycle Manager : (Snapshot manager)
+
+Retains : 
+Production : 14 Days
+Non Prod : 7 Days
 
 
+Udemy :
 
+Linux : 	https://www.udemy.com/course/linuxwithavinash/?couponCode=MAR2021
 
+Jenkins: 	https://www.udemy.com/course/jenkinswithavinash/?couponCode=MAR2021
 
+Git 	:	
+	https://www.udemy.com/course/gitbyavinash/?referralCode=F7D62CDB4D61EADE1CC7
 
 
 
