@@ -290,6 +290,46 @@ Git 	:
 	https://www.udemy.com/course/gitbyavinash/?referralCode=F7D62CDB4D61EADE1CC7
 
 
+______________________________________________________________________________________
+
+D: 15/03/2021
+
+
+Requirement : 100 ec2 instances, Custom WP, IST, Web Server (IIS), Putty 
+
+CIS : Center for Internet Security. 
+
+Golden AMI : Customised AMI.. 
+
+1 ec2 instance :--> Perform all customisations.. then create an AMI.
+
+
+http://localhost/
+http://127.0.0.1
+IEESC : Internet explorer Enhanced security configuration. 
+
+
+
+Security Groups : Works as firewall at Instance level.
+NACL : Network ACcess Control List : Works as firewall at subnet level (ap-south-1a/1b)
+
+SG are sateful. We always need to takes care about the Inbound rules.
+By Defaultly, all outbiund traffic is allowed. 
+We need to open required ports in inbound rules.
+--> Changes to the SG takes effect immediately. No need to stop/start instance.
+
+Inbound = Traffic/Service delivering from ec2 instance.
+Outbound = Traffic/Service coming into ec2 instance.
+
+
+
+
+
+
+
+
+
+
 
 
 
