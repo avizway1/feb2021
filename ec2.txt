@@ -321,24 +321,56 @@ We need to open required ports in inbound rules.
 Inbound = Traffic/Service delivering from ec2 instance.
 Outbound = Traffic/Service coming into ec2 instance.
 
+_______________________________________________________________________________________
+
+D: 16/03/2021
+
+ec2-user : Default user name
+
+sudo su			--> Switch to root user
+whoami			--> As what user we are working now
+ls			--> list the files / directory
+ls -a			--> List everything (including hidden)
+
+in linux any file name or folder name starts with . : it's a hidden file/dir
+
+pwd 			--> print working directory : it tells us where we are working 
+cd			--> Change directory
+
+cd /home/ec2-user
+
+touch filename		--> create a simple file
+
+VIM Editor : 
+
+vim filename		--> FIle opens in editor
+press I			--> INSERT mode
+press ESC		--> TO comeout from Insert mode
+:wq			--> Write the changes and quit the editor
+:q!			--> Quit editor without writing the data
+
+more / cat		--> TO view the file content without opening file
+
+cp			--> copy and paste
+mv			--> cut and paste / "To rename file/folder"
+
+mkdir			--> Make directory
+
+rpm			--> Redhat package manager
+yum 			--> Yellowdog updater manager
 
 
+yum install httpd -y	--> To install apache webserver
+service httpd start	(stop/restart/status)	--> TO start the service
+chkconfig httpd on	--> Make httpd as logon service
+
+cd /var/www/html/	
+
+vim index.html	, write the data , :wq!	
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+lsblk		--> shows all the devices associated to instance
+df -Th		--> available Volumes and mount points
 
 
 
