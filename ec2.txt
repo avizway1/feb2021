@@ -372,6 +372,74 @@ vim index.html	, write the data , :wq!
 lsblk		--> shows all the devices associated to instance
 df -Th		--> available Volumes and mount points
 
+________________________________________________________________________________________
+
+D: 17/03/2021
+
+lsblk  : list the block devices
+df -Th : list the available devices
+
+new volume name : /dev/xvdf
+
+to check file system on existing volume :   	file -s /dev/xvdf
+
+Write xfs file system to new volume 	:	mkfs -t xfs /dev/xvdf			
+
+we need to mount to start using it.
+
+mkdir newvolume
+
+mount /dev/xvdf newvolume
+
+to do perminent mount, we need to add an entry to fstab file (/etc/fstab)
+Get the entry information from /etc/mtab file
+
+cat /etc/mtab .. and look for the most recent entry related to our volume.. then copy it and write this information to /etc/fstab file.
+
+/dev/xvdf /home/ec2-user/newvolume xfs rw,relatime,attr2,inode64,noquota 0 0
+
+vim /etc/fstab --> Paste the abouve informaiton.
+
+_______
+
+To increase the existing volume size.
+
+yum install xfsprogs		--> To install xfs tools 
+
+xfs_growfs -d newvolume/
+
+ext3 / ext4: resize2fs 
+_______
+
+
+Task 1 : Launch an amazon linux instance, Associate a volume (1gb), and make it available. Increase the size to 2 gb..  write some data to 2gb volume..
+
+Launch another linux instance.. detach the 2gb volume from instance 1 and attach here.. make it available and verify the data.
+
+______
+
+Instance 1 : associated with a keypair.. you lost that keypair.. --> Create a GoldenAMI of instance 1.. Launch instance 2 from GoldenAMI, associate new keypair to this instance 2.. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
