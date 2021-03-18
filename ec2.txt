@@ -420,6 +420,70 @@ ______
 
 Instance 1 : associated with a keypair.. you lost that keypair.. --> Create a GoldenAMI of instance 1.. Launch instance 2 from GoldenAMI, associate new keypair to this instance 2.. 
 
+________________________________________________________________________________________
+
+D: 18/03/2021
+
+Userdata : http://169.254.169.254/latest/user-data/
+
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is my BSS Webserver</h1>" >> /var/www/html/index.html
+
+<script>
+echo %DATE% %TIME% >> C:\Windows\Temp\test.txt
+</script>
+<persist>true</persist>
+
+<powershell>
+tzutil /s "India Standard Time"
+echo %DATE% %TIME% >> C:\Windows\Temp\test.txt
+</powershell>
+<persist>true</persist>
+
+
+Metadata : http://169.254.169.254/latest/meta-data/
+curl http://169.254.169.254/latest/meta-data/
+
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+events/
+hibernation/
+hostname
+identity-credentials/
+instance-action
+instance-id
+instance-life-cycle
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4
+public-keys/
+reservation-id
+security-groups
+services/
+
+____________
+
+ENI : Elastic Network Interface.
+
+
+Instance store volumes : Ephemeral Storages : NO FREE TIER ELIGIBILITY
+--> We cannot stop/start the ec2 instances.
+--> We will loss the instance/data if underlying hardware failure happens.
+
+___________
+
 
 
 
