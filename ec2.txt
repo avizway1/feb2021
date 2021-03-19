@@ -482,25 +482,48 @@ Instance store volumes : Ephemeral Storages : NO FREE TIER ELIGIBILITY
 --> We cannot stop/start the ec2 instances.
 --> We will loss the instance/data if underlying hardware failure happens.
 
-___________
+______________________________________________________________________________________
+
+D: 19/03/2021
+
+Vertical Scaling : Upgrading same ec2 instance.
+Harizontal scaling : Scaling application with multiple ec2 instances. 
+
+ELB : 
+--> Classic ELB : Previous generation : http, https, tcp, udp
+--> Application ELB (ALB) : http & https
+--> Network ELB (NLB) : tcp, tls, tcp_udp
+--> Gateway ELB 
 
 
 
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is my 8080 Instance</h1>" >> /var/www/html/index.html
 
 
 
+Internal ELB : Intranet : with in network
+Internet-facing : Internet : works across the globe
+
+Access Logs : Logging on ELB.. 
+
+Application LB : 
+--> Round robin
+--> Least outstanding requests
+
+Network LB : Flowhash algorithm
+
+Security Group settings of ELB : 
 
 
+Task : Launch multiple ec2 instance and make it as webserver.. Create ALB.. 
+Port 80 --> Instance 1
+Port 8080 --> Instance 2
 
-
-
-
-
-
-
-
-
-
+Configure SG as discussed. Instances should not accessesble using Publi IPs but should deliver without any issues using ELB DNS name.
 
 
 
