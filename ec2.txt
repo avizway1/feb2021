@@ -525,6 +525,32 @@ Port 8080 --> Instance 2
 
 Configure SG as discussed. Instances should not accessesble using Publi IPs but should deliver without any issues using ELB DNS name.
 
+______________________________________________________________________________________
+
+D: 20/03/2021
+
+
+Network LB have an advantage. We can have a dedicated/EIP IP address.  
+
+
+CLoudwatch : Monitoring service on AWS. We can monitor CPU, Network, Disk, Status checks.. We cannot monitor Memory (RAM) utilisation using default CW metrics.
+
+BY installing CW agent in our ec2 instance, we can monitor memory usage. We can get any logs/application logs/OS level logs to AWS console.
+
+Basic Monitoring : 5 Minutes Interval..  Free
+Detailed Moniroting : 1 Minute Interval.. Cost us
+
+Flow logs : We can enable logging at Instance level / Subnet Level / VPC level.
+
+Custom CW Metrics : https://www.youtube.com/watch?v=Fe2mEkWiNSA
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-ngddrqic-dxMwVma389eUApWlCvEhVg
+
+
+
+
+
+
 
 
 
