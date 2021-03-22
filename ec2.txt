@@ -546,6 +546,28 @@ Custom CW Metrics : https://www.youtube.com/watch?v=Fe2mEkWiNSA
 
 https://join.slack.com/t/awswithavinash/shared_invite/zt-ngddrqic-dxMwVma389eUApWlCvEhVg
 
+________________________________________________________________________________________
+
+D: 22/03/2021
+
+ASG : Auto Scaling Group : 
+
+
+Step 1 : Create a Golden AMI
+Step 2 : Create an ELB (empty/plain)
+Step 3 : Create an ASG
+	3.1 : Create a Launch Configuration
+	3.2 : Create an Auto Scaling Group
+
+
+
+
+
+
+
+
+
+
 
 
 
