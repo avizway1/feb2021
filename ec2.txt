@@ -559,6 +559,34 @@ Step 3 : Create an ASG
 	3.1 : Create a Launch Configuration
 	3.2 : Create an Auto Scaling Group
 
+_______________________________________________________________________________________
+
+D: 23/03/2021
+
+EFS : Elastic File System
+--> Supports NFS (Network FIle system) v4.1
+--> Currently supports only Linux OS
+--> We can share with another VPC resources (same region / another region). 
+--> add entry in /etc/fstab file for perm mount.
+--> No pre-provisioning required. 
+
+mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-a8311179.efs.ap-south-1.amazonaws.com:/ /var/www/html/
+
+cat /etc/mtab --> get entry and write same in /etc/fstab
+
+
+Windows : FSx
+--> Works with SMB (Server Message Block) protocol
+--> We required Active Directory. 
+
+
+Lightsail : SaaS : We don't use much.. 
+everything comes as bundle.. No Nonsense pricing.. 
+
+
+
+
+
 
 
 
