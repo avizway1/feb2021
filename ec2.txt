@@ -583,30 +583,52 @@ Windows : FSx
 Lightsail : SaaS : We don't use much.. 
 everything comes as bundle.. No Nonsense pricing.. 
 
+_______________________________________________________________________________________
+
+D: 24/03/2021
+
+AWS CLI : 
+
+Programatic Access : AccessKeyID and SecretAccessKey
+
+https://aws.amazon.com/cli
+
+aws --version
+
+aws configure
+AccessKeyid :
+SecretAccessKey :
+Default region :
+output format : 
+
+aws servicename command
+
+aws s3 ls 				--> List the buckets
+aws s3 ls s3://bucketname		--> List objects from the bucket
+aws s3 cp f:/ads/object s3://bucketname	
+aws s3 sync sourcepath destinationpath	
+aws s3 mb s3://bucketname --region ap-south-1
+aws s3 presign s3://nareshit/ec2exam.pdf --expire 60
+
+presign url : Generate url that can expire after certain duration. 
+
+--debug to any command to see how command is executing.
 
 
+**** Use roles instead of CLI Within aws environment.
+For outside environment, Use Temporary credentails along with session tocken. 
 
 
+Task : Launch an ec2 instance using CLI. 
+	(amiid, subnetid, securitygroupid, keypair)
 
+Task 2 : Local folder data and AWS S3 data should be in sync.  
+How can we execute a command periodically using Crontab (Linux).
+Use Task Scheduler to execute a command periodically.
 
+aws s3 sync sourc dest
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Task 3 : Explore clibuilder.  https://awsclibuilder.com/home
+https://docs.aws.amazon.com/cli/latest/reference/
 
 
