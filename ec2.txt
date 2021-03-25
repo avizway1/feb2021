@@ -631,4 +631,38 @@ aws s3 sync sourc dest
 Task 3 : Explore clibuilder.  https://awsclibuilder.com/home
 https://docs.aws.amazon.com/cli/latest/reference/
 
+_______________________________________________________________________________________
+D: 25/03/2021
+
+Roles : Recommanded to use roles instead of using/configuring Cli user cred.
+
+ProjectXRole : 
+--> SYstems Manager Access
+--> S3Bucketaccess
+
+_____
+
+Systems Manager : 
+
+Task : Launch a Linux ec2 instance and make it as webserver using Systems Manager.
+
+Task 2 : Install Putty application (.msi) in windows ec2 instance using SSM.
+
+Task 3 : Try Ec2 rescue tool for Windows.
+
+Task 4 : Create an Index.html and upload it to s3 bucket... WHile launching an ec2 instance, pass the user data to make it as webserver.. and get the index.html from s3 to webserver and deliver as webpage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
