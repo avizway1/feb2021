@@ -652,6 +652,34 @@ Task 3 : Try Ec2 rescue tool for Windows.
 
 Task 4 : Create an Index.html and upload it to s3 bucket... WHile launching an ec2 instance, pass the user data to make it as webserver.. and get the index.html from s3 to webserver and deliver as webpage.
 
+_______________________________________________________________________________________
+
+D: 26/03/2021
+
+Beanstalk : PaaS : Develop your application / write your code.. Without infra provisioning manually, upload the code to Beanstalk and it scales automatically for us.
+
+
+Placement groups : Free.. 
+--> We cannot merge PG.
+--> We cannot run Dedicated hosts in PG. 
+
+Cluster PG : Low network latency and high n/w throughput. Can't span acrtoss Multiple AZs 
+Partition PG : Bigdata, HDFS, HBase, Cassandra..  We can create max 7 Par PG. Can span acrtoss Multiple AZs also. 
+Spread PG : Can span acrtoss Multiple AZs also. 
+
+https://www.youtube.com/watch?v=umYTuc0zudc
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
