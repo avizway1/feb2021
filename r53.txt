@@ -1,0 +1,63 @@
+Route53 : AWS Own DNS Service. 
+
+DNS : DOmain Naming System/Service :  DOmain names to IP Addresses and IP Address to FQDN (Fully Qualified DOmain Names).
+
+
+https://ahjjfjg.elb.ap-south-1.amazonaws.com = avinash.tk
+
+Domain Registrers : Godaddy, Bigrock, aws r53, Web.com, Freenom.com
+avinash.tk
+
+IANA : RootZOne DB : .com .in .us
+ICANN : Maintain DOmain uniqueness.
+whois db : Tells us who owns the domain name, when it expires. 
+
+In AWS, We always use A record with Alias record.
+
+A Record : Address Record : 
+AAAA Record : IPv6
+
+CNAME : Cananical name record : DOmain redirections
+TXT Record : Text record
+MX : Main exchange record: 
+
+_____
+
+Get a domain name from Freenom.com
+
+Domain registrer = godaddy / Freenom.    avinash.tk
+
+HostedZOne : COst us 0.50$/Month. 
+
+HostedZone name should be same as Domain Name.     avinash.tk = avinash.tk
+
+We will get NS record and SOA record by defaultly, when we create a Hosted Zone.
+NS = Name Servers.
+SOA = Start of AUthority
+
+Above Name Servrs should be configured at Domain Registrer. THen only Domain requests will come to AWS environment.
+
+
+
+Simple RP :
+Weighted RP :
+Latency RP :
+Failover RP :
+Geolocation RP :
+Multi Value Answer RP : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
