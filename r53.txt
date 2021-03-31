@@ -37,20 +37,17 @@ SOA = Start of AUthority
 
 Above Name Servrs should be configured at Domain Registrer. THen only Domain requests will come to AWS environment.
 
-
-
 Simple RP :
-Weighted RP :
+Weighted RP : The weight can be a number between 0 and 255. If you specify 0, Route 53 stops responding to DNS queries using this record.
+
 Latency RP :
 Failover RP :
 Geolocation RP :
 Multi Value Answer RP : 
 
-
-
-
-
-
+1. ipconfig /flushdns.
+2. CHnage the DNS servers in local device.
+3. Sometimes, Browser/system cache will load wrong data/outdated data.
 
 
 
