@@ -1,0 +1,70 @@
+VPC : Virtual Private Cloud : 
+--> EVery region contains Default VPC. 
+
+
+IP Address : 
+
+Ipv4 : It's a 32 bit : 2^32
+IPv6 : 128 bit : 2^128
+
+IPv4 : 
+Class A : 0.0.0.0 - 126.255.255.255
+Class B : 128.0.0.0 - 191.255.255.255
+Class C : 192.0.0.0 - 223.255.255.255
+
+Class D : 224.0.0.0 - 239.255.255.255
+Class E : 240.0.0.0 - 254.255.255.255
+
+0 - Network ip
+127 - Loopback
+255 - Broadcost
+
+
+Class A : N.H.H.H   : 127 Networks, Each network contains 16 million hosts
+Class B : N.N.H.H   : 16,000 Networks, Each network contains 65 Thousand hosts
+Class C : N.N.N.H   : 2 million networks, Each network contains 254 hosts (256-2)
+
+
+Public Ip Address : Unique across the globe  : 49.206.38.178 : ISP Costus 
+Private IP address : Unique with in the network : 192.168.0.138
+
+PRIVATE IP RANGES
+CLASS A: 10.0.0.0 to 10.255.255.255
+CLASS B: 172.16.0.0 to 172.31.255.255
+CLASS C: 192.168.0.0 to 192.168.255.255
+
+32 bit : 32 slots : 0 and 1 how many ways we can fill the empty slots
+
+/32	/31	/30	/29	/28	/27	/26	/25	/24	/16	/0
+
+2^0	2^1	2^2	2^3	2^4	2^5	2^6	2^7	2^8	2^16	2^32
+
+1	2	4	8	16	32	64	128	256	65536	4M
+
+Every NEtwork defualtly reservs 2 IP addresses. But in AWS, AWS reserve 5 IPs.
+
+2 : For Network ID and Broadcost ID
+2 : DNS Servers
+1 : Future Use
+
+AWS SUpports :  /28 to /16
+
+/28 Minimum vpc size : 16 - 5 = 11 Usable IPs
+/24 : 256 - 5 = 251 Usable IPs
+/16 : Maximum vpc size : 65536 - 5 = 65531 Usable IPs
+
+Tshirt size of network = How big is your network = SUbnet (/32, /16)
+CIDR : Classless Inter Domain routing  : CIDR RANGE = VPC Range
+
+
+Public Subnet : We can access these resources anywhere from the world, as it is Internet facing.
+Private Subnet : We can't access over the internet. NonInternet facing resources.
+
+
+https://www.davidc.net/sites/default/subnets/subnets.html
+
+
+
+
+
+
