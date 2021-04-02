@@ -63,6 +63,40 @@ Private Subnet : We can't access over the internet. NonInternet facing resources
 
 https://www.davidc.net/sites/default/subnets/subnets.html
 
+____________________________________________________________________________________
+D: 02/04/2021
+
+Step 1 : Create a VPC. Name : CustomVPC CIDR : 192.168.0.0/16
+
+(Along with VPC, Default SG, DefaultNACL and Main RouteTable)
+
+Step 2 : Create Subnets. 
+
+Name : PublicSubnet : CIDR: 192.168.0.0/18
+Name : PrivateSubnet : CIDR : 192.168.64.0/18 
+ 
+Step 3 : Create an InternetGateway.
+
+(One VPC can contains only one IGW at a time)
+
+Step 4 : Create RouteTable, perform subnet associations and add routes.
+
+Main Route Table : All the subnets we created defaultly adds to this route table.
+
+PublicRoute : Add a route 0.0.0.0/0 --> InternetGateway, Navigate to Subnet Association choose "PublicSUbnet"
+
+PrivateRoute : Don't add any route with InternetGateway. 
+
+Step 5 : (Optional) : Choose PublicSUbnet, Actions, "Modify AutoIp assign settings", Enable.
+
+
+JUMP Server : Always runs in CustomVPC PublicSUbnet, We use this Instance to connect to all the private Subnet instances. 
+
+
+Task : Create a VPC with 2 Public SUbnets and 2 Private SUbnets. 
+(ap-south-1a Create 1 public sn and 1 Private sn)
+(ap-south-1b Create 1 public sn and 1 Private sn)
+
 
 
 
