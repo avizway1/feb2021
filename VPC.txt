@@ -97,6 +97,60 @@ Task : Create a VPC with 2 Public SUbnets and 2 Private SUbnets.
 (ap-south-1a Create 1 public sn and 1 Private sn)
 (ap-south-1b Create 1 public sn and 1 Private sn)
 
+______________________________________________________________________________________
+
+D: 03/04/2021
+
+NAT : 
+NAT gateway : This is designed to provide internet access to Private SUbnet ec2 instances. NAT Gateway always runs in customVPC Public SUbnet.
+--> NAT Gateway requires an EIP, so it cost us. 
+
+--> Update the route tables accordingly, then only we will get internt in Private subnet.
+--> Deleting NAT Gateway won;t delete EIP, Navigate to EIP and release it.
+
+__
+ 
+NAT Instance : We won't use in Production environment. This is designed to provide internet access to Private SUbnet ec2 instances. NAT Instance always runs in customVPC Public SUbnet.
+--> For better spped, choose high configured ec2 instance.
+--> We must open http and https traffic in Security groups.
+--> We should disable Source/Destination check.
+--> Update the route tables accordingly, then only we will get internt in Private subnet.
+
+____
+
+LOgging on VPC : 
+--> FLowLogs : We can store logs in S3 bucket / CLoudwatch Log Group.
+	--> Instance Level
+	--> Subnet Level
+	--> VPC Level
+___
+
+NACLs : 
+--> Default NACL allow all the traffic.
+--> CUstomNACL won;t allow any traffic.
+
+--> We need t open ports in Inbound rules and outbound rules.
+--> We must open ephemeral ports. (https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html) (1024-65535)
+
+--> Lowest rule number haves highest priority. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
