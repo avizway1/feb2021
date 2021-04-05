@@ -116,6 +116,9 @@ NAT Instance : We won't use in Production environment. This is designed to provi
 --> We should disable Source/Destination check.
 --> Update the route tables accordingly, then only we will get internt in Private subnet.
 
+If we are using IPv6 : We need to use "Egress Only Interent Gateway" instead of NAT Gateway.
+NAT Gateway works only with IPv4.
+
 ____
 
 LOgging on VPC : 
@@ -133,6 +136,54 @@ NACLs :
 --> We must open ephemeral ports. (https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html) (1024-65535)
 
 --> Lowest rule number haves highest priority. 
+
+______________________________________________________________________________________
+
+D: 05/04/2021
+
+VPC Peering :
+--> Designed to enable communication between multiple VPCs. 
+--> VPC peering is NonTransitive peering.
+--> Requester VPC and Accepter VPC should not contains same CIDR block.
+
+
+	Requester			Accepter	
+VPC	vpc-05d316eec7c72f4e1		vpc-0c84f896a6c0bb6fe	
+CIDR	192.168.0.0/16			172.31.0.0/16
+Region	ap-south-1			us-east-1
+Account	12 dit acc if			12 digit acc id
+
+
+VPC Endpoints : (Private Links)
+
+We have an ec2 instance in Private SUbnet and that private subnet don't have internet access (no NAT Gateway/NAT Instance).  But from this ec2 instance, we need to get/put data to an s3 bucket.
+
+_________
+
+VPN Connection : https://www.youtube.com/watch?v=JSTyjISscNg
+
+Transit Gateway: https://www.youtube.com/watch?v=xyLlMBHy2wc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
