@@ -1,0 +1,50 @@
+RDS : Relational Database Service : 
+RDS Supports below six relational database engines.
+--> Amazon Aurora	: mysql/postgresql tools
+--> MySql		: MySQL Workbench
+--> Microsoft SQL	: SSMS (SQL Server Management Studio)
+--> PostGreSQL		: PGAdmin
+--> MariaDB		: Workbench
+--> Oracle Database	: Oracle ent tool / Toad
+
+Caching Service :Elasticache
+--> MemcacheD
+--> Redis
+
+NoSQL : Serverless :
+--> DynamoDB
+Caching service for DynamoDB : DAX (DYnamodb Accelerator)
+
+DMS : Database Migration Service
+
+Redshift : Amazon's datawarehousing solution.
+
+____
+** --> We always run DB instances in Private subnets.
+
+-1/-2 version is preferable.
+
+Free Tier : db.t2.micro, 750 Hrs/Month
+
+--> We won't get any option to login to db instance to see whats happening at OS level.
+
+
+Enable Backup : Yes
+Backup retention period :  Max 35 Days.  Default : 7 Days
+
+For RDS Instances, We won;t get any IP addresses, We will get Database Endpoint.
+
+Task : Launch an ec2 instance in Public SUbnet and install workbench.. Launch an rds instance in Private subnet.. Get connect to the RDs instance from ec2 instance running in public subnet.
+
+Task 2 : Copy the shared sample db to Public SUbnet instance and restore/Import it to RDS instance.
+
+
+
+
+
+
+
+
+
+
+
