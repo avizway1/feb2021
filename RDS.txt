@@ -38,6 +38,29 @@ Task : Launch an ec2 instance in Public SUbnet and install workbench.. Launch an
 
 Task 2 : Copy the shared sample db to Public SUbnet instance and restore/Import it to RDS instance.
 
+_______________________________________________________________________________________
+
+D: 07/04/2021
+
+MultiAZ Deployment :Another copy of our db instance runs in another AZ. (Not in another region). 
+--> THis feature is for HA and DR purpose. Not for scaling purpose.
+
+
+ReadReplica : RR is for scaling purpose. 
+--> We can create replica copy in another region also.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

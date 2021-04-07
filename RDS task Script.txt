@@ -1,0 +1,20 @@
+Launch an amazon Linux 2 AMI
+
+
+yum install httpd php-mysql -y
+amazon-linux-extras install -y php7.3
+cd /var/www/html
+wget https://wordpress.org/latest.tar.gz
+tar -xzvf latest.tar.gz
+cp -rv wordpress/* /var/www/html/
+rm -rfv wordpress
+rm -rfv latest.tar.gz
+chmod -R 755 wp-content
+chown -R apache:apache wp-content
+service httpd start
+chkconfig httpd on
+
+THis script make our amazon instance as Wordpress webser, it needs DB server. 
+
+Launch RDS MySql db instance and use it here.
+
