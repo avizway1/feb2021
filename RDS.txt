@@ -1,11 +1,11 @@
 RDS : Relational Database Service : 
-RDS Supports below six relational database engines.
---> Amazon Aurora	: mysql/postgresql tools
---> MySql		: MySQL Workbench
---> Microsoft SQL	: SSMS (SQL Server Management Studio)
---> PostGreSQL		: PGAdmin
---> MariaDB		: Workbench
---> Oracle Database	: Oracle ent tool / Toad
+RDS Supports below six relational database engines.		: MAX db Size
+--> Amazon Aurora	: mysql/postgresql tools		: 128 TB
+--> MySql		: MySQL Workbench			: 16 TB
+--> Microsoft SQL	: SSMS (SQL Server Management Studio)	: 16 TB
+--> PostGreSQL		: PGAdmin				: 16 TB
+--> MariaDB		: Workbench				: 16 TB
+--> Oracle Database	: Oracle ent tool / Toad		: 16 TB
 
 Caching Service :Elasticache
 --> MemcacheD
@@ -49,12 +49,45 @@ MultiAZ Deployment :Another copy of our db instance runs in another AZ. (Not in 
 ReadReplica : RR is for scaling purpose. 
 --> We can create replica copy in another region also.
 
+_______________________________________________________________________________________
+
+D: 08/04/2021
+
+If we enable "Automated Backup", we will get system backup while db instance is creating.
+WHenever any major operating is happening on db instance, aws automatically creates a backup copy.
+--> We cannot delete these "System Backups".
+--> System Backups deletes automatically based on the backup retention period.
+--> When we delete the DB instance system backups deletes automatically.
+
+--> We can create a backup manually. 
+--> We need to delete these manually.
+
+We can restore the new db instances from backups called snapshots.
+
+--> We have reserved db instances option in RDS also.
+
+If you want to copy a db instance to another region. 
+-> Create a snapshot, copy the snapshot to adesired region.
+
+If we want to share the db instance with another account.
+-> Create a snapshot, Share the snapshot with another aws account.
+
+Snapshot restoration is not an inplace restoration. It will restore as a new RDS db instance with new db endpoint.
 
 
+Amazon Aurora : It is compatable with Mysql and PostGreSQL. 
+--> We have server and serverless option for this aurora db.
 
 
+Serverless : You specify the minimum and maximum amount of resources needed, and Aurora scales the capacity based on database load. This is a good option for intermittent or unpredictable workloads.
 
 
+DynamoDB : It's a serverless db. 
+
+
+Task : https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
 
 
 
