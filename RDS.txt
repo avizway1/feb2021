@@ -89,6 +89,61 @@ Task : https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacTo
 
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
 
+_______________________________________________________________________________________
+
+D: 09/04/2021
+
+DYnamoDB : Caching opetion for Dynamodb is DAX
+DAX : Dynamodb accelerator.
+
+RDS : Caching for RDS is Elasticache. Elasticache supports 2 opensource 
+--> Redis (**Widely used) (RedisAUTH) (MultiAZ)
+--> MemcacheD
+
+
+Secrets Manager : We can store sensitive information (i.e: username and password) of our databases.
+
+https://aws.amazon.com/blogs/security/rotate-amazon-rds-database-credentials-automatically-with-aws-secrets-manager/
+
+https://aws.amazon.com/blogs/security/identify-arrange-manage-secrets-easily-using-enhanced-search-in-aws-secrets-manager/
+
+
+Database Migration Service (DMS): 
+_________________________________
+
+--> Have source information 
+--> Have Target information
+
+--> Launch the DMS Cluster
+
+--> Create Source Connection and target COnnection
+
+--> create a job
+
+
+Task : Perform the Migration task.
+
+Task 2 : https://www.youtube.com/watch?v=8xf1RpPdcHs	(GCP to AWS)
+
+
+Migration : 
+
+Homogenious mogration : MySql --> Mysql
+Heterogenious migration : db2 --> SCT (Schema Convertion Tool) --> mysql
+
+https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Welcome.html
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
