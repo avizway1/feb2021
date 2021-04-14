@@ -1,0 +1,94 @@
+Cloudtrail : Logging service with in AWS environment. Enabled by defaultly in all accounts. It stores last 90 days logs.
+
+We can create a trail and store logs in s3 bucket for unlimited days. If required we can apply bucket life cycle to delete the logs after * days.
+
+--> Management events : Capture management operations performed on your AWS resources.
+--> Data events : Log the resource operations performed on or within a resource. (S3, dynamodb and Lambda).
+--> Insights events : Identify unusual activity, errors, or user behavior in your account.
+
+**Recommended to create a trail for every event type.
+** For external audits, create a central bucket and store all the logs in central bucket and deliver it to external auditor.
+
+
+We have "amazon Athena" to query the Cloudtrail logs.
+We can use "DataDog", "Cloudchkr" and Splunk to analyse the ct logs.
+
+_________________________________
+
+AWS Config : (Cost Us) : AWS Config provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships have changed over time.
+
+If we want to create any custom config rules, we can use "Cloud Custodian".
+
+__________________________________
+
+AWS Trusted Advisor : Basic/Developer support plan gives 7 core area checks on our aws acount. If we need all checks, choose the Business/enterprise support plan.
+
+Cost Optimization : Under utilised resources. 
+Performance : over utilised resources.
+Security :
+Fault Tolerance : 
+Service Limits : 
+
+___________________________________
+
+Amazon Personal Health Dashboard : We can see open issues/closed issues/ongoing maintenancces from AWS.
+
+___________________________________
+
+Shared Responsibility Model : Security and Compliance is a shared responsibility between AWS and the customer.
+
+Security "OF" the CLoud : AWS responsible. (AZ, DC, Regions, Physical resources, compute, storag) 
+Security "IN" the Cloud : Customer Responsible. (iam, security policy, encryption, making resources public, opening ports for everyone)
+
+_____________________________________
+
+ACM, ELB, Cloudfront, WAF, Shield, Inspector..
+
+D: 14/04/2021
+
+
+ACM : Amazon Certificate Manager : 
+
+http:// --> https://  (add rewrite rule in ws config)
+
+--> https://raw.githubusercontent.com/avizway/redirection/master/httptohttps
+
+secure over http avinash.tk
+
+_______________________________________
+
+CloudFront : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
