@@ -59,6 +59,56 @@ _______________________________________
 
 CloudFront : 
 
+______________________________________________________________________________________
+
+D: 15/04/2021
+
+WAF : Web Application Firewall : 
+--> Application ELB
+--> CLoudfront
+--> API Gateway
+--> AWS APpSync
+
+AWS Shiled : DDoS attack.. 
+--> THis is enabled for all the aws accounts.
+--> TO protect resources from DDoS Attack, Use "Auto Scaling Group" and "Cloudfront distribution".
+--> Price : 3000$/Month. (inclused with Enterprise support plan)
+
+
+AWS Inspector : Evaluate : NO FREE TIER
+--> AWS Inspector agent need to run within our ec2 instance.
+--> Using Systems Manager we can install (ROle association is required).
+
+--> Common Vulnerabilities and Exposures-1.1
+--> CIS Operating System Security Configuration Benchmarks-1.0
+--> Network Reachability-1.1
+--> Security Best Practices-1.0
+
+__
+AWS Pricing Calc : https://calculator.aws/#/
+__
+
+TCO Calculator : Total cost of Ownership.
+
+Active Directory : https://www.youtube.com/watch?v=RDlBoAHVmZs
+AD Connector : https://www.youtube.com/watch?v=Ca259gg6SoM
+Join Linux instance to Domain : https://www.youtube.com/watch?v=LWi9-XL2vWQ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
