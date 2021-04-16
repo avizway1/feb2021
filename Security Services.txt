@@ -94,6 +94,65 @@ Active Directory : https://www.youtube.com/watch?v=RDlBoAHVmZs
 AD Connector : https://www.youtube.com/watch?v=Ca259gg6SoM
 Join Linux instance to Domain : https://www.youtube.com/watch?v=LWi9-XL2vWQ
 
+______________________________________________________________________________________
+
+D: 16/04/2021
+
+Lambda : Serverless Architecture :
+
+--> Based on code run duration and Memory configuration we will get charged.
+
+--> Python 
+(https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+(https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
+--> go
+--> Java
+--> node.js
+--> .net core
+--> Ruby
+
+--> Choose the required memory.
+
+--> Public repo : S3Uploader
+--> AWS Blueprint : Canary function 
+
+--> Increase lambda function memory and timeout duration.!!  
+--> Can we run this labda function within a VPC.!! : YES
+	--> Lmbda IAM role should have a policy "AWSLambdaVPCAccessExecutionRole"
+
+____________________
+
+SQS : Simple Queue Service : 
+--> Poll / Pull Based messeging service
+--> Used to decouple the application. 
+
+--> Standard Queue / FIFO Queue.
+
+Message retention period : Default 4 Days... Max 14 Days.. 
+Max Msg size : 256 kb
+Visibility timeout : 15 Sec
+
+
+
+
+SNS : Simple Notification Service : 
+--> Push Based msg service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
